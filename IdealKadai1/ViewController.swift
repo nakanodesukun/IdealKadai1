@@ -9,11 +9,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    @IBOutlet private weak var textField1: UITextField!
+    @IBOutlet private weak var textField2: UITextField!
+    @IBOutlet private weak var textField3: UITextField!
+    @IBOutlet private weak var textField4: UITextField!
+    @IBOutlet private weak var textField5: UITextField!
+    @IBOutlet private weak var resultLabel: UILabel!
+
+
+    
+    @IBAction func addButton(_ sender: Any) {
+a()
+
     }
-
-
+    func a() {
+        let text1 = Int(textField1.text ?? "") ?? 0
+        let text2 = Int(textField2.text ?? "") ?? 0
+        let text3 = Int(textField3.text ?? "") ?? 0
+        let text4 = Int(textField4.text ?? "") ?? 0
+        let text5 = Int(textField5.text ?? "") ?? 0
+        resultLabel.text = String(text1 + text2 + text3 + text4 + text5)
+    }
 }
 
